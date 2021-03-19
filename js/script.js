@@ -10,6 +10,8 @@
 var chilometri = prompt('quanti chilomerti vuoi percorrere?');
 var eta = prompt('digita la tua etá');
 var costoKm = 0.21;
+// costo totale del biglietto:
+var prezzoFinale
 
 // conversione dati utente
 var chilometriNum = parseInt(chilometri)
@@ -24,13 +26,13 @@ if ( isNaN ( chilometriNum && etaNum)){
 // applicazione sconto se possibile
 if ( etaNum < 18 ){
     // applicazione sconto minorenni
-    var prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 0.2 )
+    prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 0.2 )
 }else if( etaNum > 65 ){ 
     // applicazione sconto anziani
-    var prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 0.4 )
+    prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 0.4 )
 }else{
     // nessuno sconto
-    var prezzoFinale = prezzoBiglietto
+    prezzoFinale = prezzoBiglietto
 }
 
 // per indicare i centesimi sul prezzo e limitare i decimali a 2
